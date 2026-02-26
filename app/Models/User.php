@@ -15,10 +15,35 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'role'
     ];
 
     protected $hidden = [
         'password',
         'remember_token',
     ];
+
+    //Connect User -> Ticket (Relationship)
+
+    public function tickets()
+    {
+        return $this->hasMany(Ticket::class);
+    }
+
+    public function isAdmin()
+    {
+        return $this->role === 'admin';
+    }
+
+    public function isAgent()
+    {
+        return $this->role === 'agent';
+    }
+
+    public function isCustomer()
+    {
+        return $this->role === 'customer';
+    }
 }
+
+
