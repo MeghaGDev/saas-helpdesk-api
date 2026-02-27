@@ -9,6 +9,12 @@ A RESTful Helpdesk backend system built using **Laravel 12 + Sanctum Authenticat
 * Token Based Authentication (Laravel Sanctum)
 * Protected Route (/me)
 * Logout (Token Revocation)
+* Role-based authentication (Sanctum)
+* Ticket lifecycle management
+* Admin ticket assignment
+* Agent reply system
+* Email notifications on reply
+* Conversation thread API
 
 ## Tech Stack
 
@@ -36,3 +42,6 @@ POST /api/logout (Protected)
 
 Server runs at:
 http://127.0.0.1:8000
+
+
+
